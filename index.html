@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DiDi Alianza × Modelo PT | Copa Mundial 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#FF6000;--orange-d:#CC4C00;--orange-l:#FFF0E8;
+  --g1:#97C459;--g2:#EAF3DE;--g3:#3B6D11;--g4:#173404;
+  --b1:#85B7EB;--b2:#E6F1FB;--b3:#185FA5;
+  --p1:#AFA9EC;--p2:#EEEDFE;--p3:#534AB7;
+  --a1:#FAC775;--a2:#FAEEDA;--a3:#854F0B;
+  --s1:#B4B2A9;--s2:#F1EFE8;--s3:#5F5E5A;
+  --rain:#3B8ACC;--rain-l:#E0F0FF;
+  --red:#EF4444;--amber:#F59E0B;--blue:#3B82F6;
+  --ink:#1A1918;--ink2:#4A4845;--ink3:#8A8680;
+  --bg:#FAFAF8;--bg2:#F3F1EC;--card:#FFFFFF;--border:#E8E5DE;
+  --r:10px;--rx:16px;
+}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;gap:28px;height:48px}
+.nav-logo{font-size:13px;font-weight:700;color:var(--orange);letter-spacing:.02em;white-space:nowrap}
+.nav-links{display:flex;gap:0;flex:1;overflow-x:auto}
+.nav-links a{font-size:12px;color:var(--ink3);padding:0 12px;height:48px;display:flex;align-items:center;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;text-decoration:none}
+.nav-links a:hover{color:var(--ink);border-bottom-color:var(--orange)}
+.nav-tag{font-size:11px;background:var(--orange);color:#fff;padding:3px 10px;border-radius:20px;white-space:nowrap;font-weight:500}
+.lang-btn{display:flex;gap:2px;padding:3px;background:var(--bg2);border-radius:6px;border:1px solid var(--border);flex-shrink:0}
+.lang-opt{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;cursor:pointer;color:var(--ink3);transition:all .12s;border:none;background:none}
+.lang-opt.act{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+/* LAYOUT */
+section{padding:64px 32px;max-width:1080px;margin:0 auto}
+.full-bg-dark{background:var(--ink);padding:0}
+.full-bg-dark .inner{max-width:1080px;margin:0 auto;padding:64px 32px}
+.full-bg-light{background:var(--bg2);padding:0}
+.full-bg-light .inner{max-width:1080px;margin:0 auto;padding:64px 32px}
+hr.divider{border:none;border-top:1px solid var(--border);margin:0}
+.sec-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;margin-bottom:12px}
+.sec-title{font-size:28px;font-weight:700;line-height:1.2;margin-bottom:8px;letter-spacing:-.3px}
+.sec-sub{font-size:15px;color:var(--ink2);margin-bottom:36px;line-height:1.5}
+/* HOOK */
+#hook{padding:64px 32px 56px;text-align:center}
+.hook-eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.hook-title{font-size:40px;font-weight:900;line-height:1.1;letter-spacing:-.5px;margin-bottom:14px}
+.hook-title span{color:var(--orange)}
+.hook-sub{font-size:15px;color:var(--ink2);max-width:560px;margin:0 auto 10px}
+.hook-pills{display:inline-flex;gap:12px;margin:18px 0 36px;flex-wrap:wrap;justify-content:center}
+.pill{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
+.pill-orange{background:var(--orange-l);color:var(--orange)}
+.pill-blue{background:var(--b2);color:var(--b3)}
+.pill-green{background:var(--g2);color:var(--g3)}
+.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left;max-width:960px;margin:0 auto}
+.sc-card{border-radius:var(--rx);padding:24px;position:relative;overflow:hidden;transition:transform .2s}
+.sc-card:hover{transform:translateY(-2px)}
+.sc-card.c1{background:var(--bg2);border:1.5px solid var(--border)}
+.sc-card.c2{background:var(--g2);border:1.5px solid #C5E09A}
+.sc-card.c3{background:var(--orange);color:#fff}
+.sc-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;opacity:.7}
+.sc-num{font-size:36px;font-weight:900;line-height:1;letter-spacing:-.5px;font-family:'DM Mono',monospace;margin-bottom:6px}
+.sc-unit{font-size:12px;opacity:.7;margin-bottom:12px}
+.sc-params{font-size:11px;line-height:1.9;opacity:.75}
+/* RULES SECTION */
+.rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.rule-card{border-radius:var(--rx);border:1px solid var(--border);background:var(--card);padding:20px}
+.rule-icon{font-size:24px;margin-bottom:10px}
+.rule-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.rule-body{font-size:11px;color:var(--ink2);line-height:1.8}
+.timeline-row{display:flex;gap:0;margin-bottom:8px}
+.tl-step{flex:1;text-align:center;position:relative}
+.tl-step:not(:last-child)::after{content:'';position:absolute;top:16px;left:50%;width:100%;height:2px;background:var(--border);z-index:0}
+.tl-dot{width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;position:relative;z-index:1}
+.tl-date{font-size:10px;font-family:'DM Mono',monospace;color:var(--orange);font-weight:600;margin-bottom:4px}
+.tl-desc{font-size:10px;color:var(--ink3);line-height:1.4;padding:0 4px}
+/* CALENDAR - interactive format matching reference */
+.heat-summary{display:grid;grid-template-columns:1.6fr 1fr 1fr 2fr;gap:10px;margin-bottom:20px}
+.hs-cat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rx);padding:16px 18px}
+.hs-cat-h{font-size:12px;font-weight:700;margin-bottom:6px}
+.hs-cat-h.mex{color:var(--red)}
+.hs-cat-h.hot{color:var(--amber)}
+.hs-cat-h.wknd{color:var(--b3)}
+.hs-cat-desc{font-size:11px;color:var(--ink2);line-height:1.5}
+.hs-num{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rx);padding:16px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hs-n{font-size:32px;font-weight:900;font-family:'DM Mono',monospace;line-height:1}
+.hs-n.mex{color:var(--red)}
+.hs-n.hot{color:var(--amber)}
+.hs-n.wknd{color:var(--b3)}
+.hs-d{font-size:10px;color:var(--ink3);margin-top:4px}
+.hs-info{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rx);padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.hs-info strong{font-size:12px}
+.hs-info span{font-size:11px;color:var(--ink2);line-height:1.5}
+.total-row{margin-top:8px;background:linear-gradient(90deg,var(--bg2),var(--orange-l));border:1px solid var(--orange);border-radius:14px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.total-row .lbl{font-size:15px;color:var(--ink);font-weight:600}
+.total-row .grand{font-size:36px;font-weight:900;font-family:'DM Mono',monospace;color:var(--orange)}
+/* interactive calendar */
+.pt-cal-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--rx);overflow:hidden}
+.pt-cal-header{background:var(--ink);display:grid;grid-template-columns:repeat(7,1fr);gap:0}
+.pt-dow{text-align:center;font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em;padding:8px 0;font-weight:600}
+.pt-dow.we{color:var(--orange)}
+.pt-cal-month{border-bottom:1px solid var(--border)}
+.pt-cal-month-lbl{background:var(--bg2);padding:8px 16px;font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.pt-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:8px}
+.pt-day{min-height:64px;border-radius:8px;padding:8px 7px;font-size:13px;font-weight:700;position:relative;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.pt-day.empty{background:transparent}
+.pt-day.out{background:var(--bg2);opacity:.4}
+.pt-day.norm{background:var(--bg2);color:var(--ink3)}
+.pt-day.norm .pd-n{opacity:.4}
+.pt-day.wknd{background:var(--orange);color:#fff;cursor:pointer}
+.pt-day.wknd:hover{transform:scale(1.04);box-shadow:0 6px 20px rgba(232,97,26,.35);z-index:2}
+.pt-day.mex{background:rgba(239,68,68,.12);border:1.5px solid rgba(239,68,68,.5);color:var(--ink);cursor:pointer}
+.pt-day.mex:hover{transform:scale(1.04);box-shadow:0 6px 20px rgba(239,68,68,.25);z-index:2}
+.pt-day.hot{background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.4);color:var(--ink);cursor:pointer}
+.pt-day.hot:hover{transform:scale(1.04);box-shadow:0 6px 20px rgba(245,158,11,.25);z-index:2}
+.pd-n{font-size:15px;font-weight:700;font-family:'DM Mono',monospace;line-height:1;margin-bottom:4px}
+.pt-day.wknd .pd-n,.pt-day.mex .pd-n{color:inherit}
+.pt-day.mex .pd-n{color:var(--red)}
+.pt-day.hot .pd-n{color:var(--amber)}
+.pd-lbl{font-size:9px;font-weight:600;line-height:1.3;margin-bottom:2px}
+.pd-time{font-size:8px;font-family:'DM Mono',monospace;opacity:.85;line-height:1.3;margin-top:auto}
+.pd-flag{position:absolute;top:5px;right:5px;font-size:10px}
+.pt-cal-legend{display:flex;gap:14px;flex-wrap:wrap;padding:12px 16px;background:var(--bg2);border-top:1px solid var(--border)}
+.cleg{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink2)}
+.cleg-dot{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+/* modal */
+.pt-modal{position:fixed;inset:0;background:rgba(26,25,24,.8);backdrop-filter:blur(8px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.pt-modal.show{display:flex;animation:fdIn .2s ease}
+@keyframes fdIn{from{opacity:0}to{opacity:1}}
+.pt-modal-box{background:var(--card);border:1px solid var(--border);border-radius:20px;max-width:520px;width:100%;padding:32px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+.pt-modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);color:var(--ink3);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .12s}
+.pt-modal-close:hover{background:var(--bg);color:var(--ink)}
+.pt-modal-date{font-family:'DM Mono',monospace;font-size:12px;color:var(--orange);letter-spacing:.15em;margin-bottom:8px;text-transform:uppercase}
+.pt-modal-h{font-size:22px;font-weight:700;margin-bottom:20px;line-height:1.3;color:var(--ink)}
+.pt-drow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border);font-size:13px}
+.pt-drow:last-child{border:none}
+.pt-drow .k{color:var(--ink3)}
+.pt-drow .v{color:var(--ink);font-weight:600;text-align:right}
+.pt-drow .v.time{color:var(--orange);font-family:'DM Mono',monospace}
+.pt-drow .v.mex{color:var(--red)}
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
+.price-card{border-radius:var(--rx);padding:22px;border:2px solid transparent}
+.price-card.tier-a{background:var(--g2);border-color:#C5E09A}
+.price-card.tier-b{background:var(--b2);border-color:#BFD9F3}
+.price-tier-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;margin-bottom:6px}
+.price-tier-label.green{color:var(--g3)}
+.price-tier-label.blue{color:var(--b3)}
+.price-main{font-size:40px;font-weight:900;font-family:'DM Mono',monospace;line-height:1;margin-bottom:4px}
+.price-main.green{color:var(--g4)}
+.price-main.blue{color:var(--b3)}
+.price-unit{font-size:12px;color:var(--ink2);margin-bottom:14px}
+.price-cond{font-size:12px;padding:8px 10px;border-radius:8px;line-height:1.5}
+.price-cond.green{background:rgba(151,196,89,.15);color:var(--g3)}
+.price-cond.blue{background:rgba(133,183,235,.2);color:var(--b3)}
+.penalty-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rx);overflow:hidden}
+.pen-head{background:#FFF0EE;padding:12px 16px;font-size:11px;font-weight:700;color:#B91C1C;text-transform:uppercase;letter-spacing:.1em;border-bottom:1px solid #FECACA}
+.pen-row{display:flex;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);gap:12px}
+.pen-row:last-child{border-bottom:none}
+.pen-type{flex:1;font-size:12px;color:var(--ink)}
+.pen-amount{font-size:13px;font-weight:700;font-family:'DM Mono',monospace;color:#B91C1C;white-space:nowrap}
+.pen-note{font-size:11px;color:var(--ink3);flex:1;text-align:right}
+.bonus-card{background:var(--orange-l);border:2px solid var(--orange);border-radius:var(--rx);padding:16px 20px;display:flex;align-items:center;gap:16px;margin-top:16px}
+.bonus-icon{font-size:28px;flex-shrink:0}
+.bonus-amount{font-size:28px;font-weight:900;font-family:'DM Mono',monospace;color:var(--orange);line-height:1}
+.bonus-desc{font-size:12px;color:var(--ink2);margin-top:3px}
+/* SIMULATOR */
+.sim-wrap{background:var(--card);border-radius:var(--rx);border:1px solid var(--border);padding:20px;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.sml{font-size:13px;color:var(--ink)}
+.sml .mg{display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);gap:16px}
+.sml .lp{background:var(--bg);border-radius:8px;padding:12px 14px;border:1px solid var(--border)}
+.sml .lph{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:12px}
+.sml .sr{display:grid;grid-template-columns:1fr 58px;align-items:center;gap:4px;margin-bottom:12px}
+.sml .sr label{font-size:11px;color:var(--ink2)}
+.sml .sr input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--orange)}
+.sml .sv{font-size:12px;font-weight:600;text-align:right;font-family:'DM Mono',monospace;color:var(--orange)}
+.sml .tog-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:8px 10px;background:var(--bg2);border-radius:6px}
+.sml .tog-label{font-size:11px;color:var(--ink2);flex:1}
+.sml .tog-btns{display:flex;gap:3px}
+.sml .togb{font-size:10px;padding:3px 9px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink3);cursor:pointer;transition:all .12s;font-weight:500}
+.sml .togb.act{background:var(--orange);border-color:var(--orange);color:#fff}
+.sml .totkard{background:var(--g2);border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid #C5E09A}
+.sml .tkl{font-size:11px;color:var(--g3);margin-bottom:2px;font-weight:500}
+.sml .tkn{font-size:32px;font-weight:700;color:var(--g4);line-height:1;letter-spacing:-.5px;font-family:'DM Mono',monospace}
+.sml .tks{font-size:11px;color:var(--g3);margin-top:6px}
+.sml .brow{margin-bottom:10px}
+.sml .blbl{font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.sml .bwrap{height:12px;border-radius:3px;background:var(--bg2);overflow:hidden}
+.sml .bfill{height:100%;border-radius:3px;transition:width .3s ease;min-width:2px}
+.sml .bval{font-size:11px;font-weight:600;font-family:'DM Mono',monospace}
+.sml .sim-note{margin-top:10px;padding:8px 10px;border-radius:6px;font-size:10px;line-height:1.65}
+.sml .sim-note.green{background:var(--g2);color:var(--g3)}
+.sml .sim-note.amber{background:var(--a2);color:var(--a3)}
+.sml .rg{display:grid;grid-template-columns:1fr 20px 1fr;gap:6px;align-items:start;margin-top:10px}
+.sml .rcd{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.sml .rcd-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;color:var(--ink3)}
+.sml .rcd-num{font-size:20px;font-weight:700;font-family:'DM Mono',monospace;line-height:1}
+.sml .rcd-sub{font-size:10px;color:var(--ink3);margin-top:3px}
+.sml .vsep{text-align:center;font-size:11px;color:var(--ink3);padding-top:22px}
+/* MYTHS */
+.myth-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.myth-card{background:#262320;border:1px solid #3A3531;border-radius:var(--rx);padding:22px}
+.myth-n{font-size:11px;font-weight:700;color:var(--orange);letter-spacing:.1em;margin-bottom:12px}
+.myth-wrong{background:rgba(255,96,0,.08);border-radius:8px;padding:10px 12px;margin-bottom:12px}
+.mw-tag{font-size:10px;font-weight:700;color:#FF8A4C;margin-bottom:4px}
+.mw-text{font-size:12px;color:rgba(255,255,255,.7);line-height:1.5}
+.mr-tag{font-size:11px;font-weight:700;color:#97C459;margin-bottom:6px}
+.mr-text{font-size:12px;color:rgba(255,255,255,.75);line-height:1.6;margin-bottom:10px}
+.myth-stat{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:4px 0}
+.myth-stat .mk{color:rgba(255,255,255,.45);font-size:11px;flex:1}
+.myth-stat .mv{color:rgba(255,255,255,.9);font-weight:600;font-family:'DM Mono',monospace;white-space:nowrap}
+.myth-stat .mv.hi{color:#97C459}
+.myth-stat .mv.lo{color:#FAC775}
+.myth-vs{text-align:center;font-size:10px;color:rgba(255,255,255,.25);padding:2px 0}
+.highlight-row{background:rgba(150,196,89,.1);border:1px solid rgba(150,196,89,.25);border-radius:5px;padding:7px 10px;margin-top:8px;font-size:11px;color:rgba(150,196,89,.95);line-height:1.5}
+/* Compare card for myth 1 */
+.compare-card{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.cmp-col{border-radius:8px;padding:12px}
+.cmp-col.ft{background:rgba(150,196,89,.08);border:1px solid rgba(150,196,89,.2)}
+.cmp-col.pt{background:rgba(250,199,117,.08);border:1px solid rgba(250,199,117,.2)}
+.cmp-col-h{font-size:11px;font-weight:700;margin-bottom:8px}
+.cmp-col.ft .cmp-col-h{color:#97C459}
+.cmp-col.pt .cmp-col-h{color:#FAC775}
+.cmp-row{font-size:10px;color:rgba(255,255,255,.6);line-height:1.8;padding:2px 0}
+.cmp-row span{font-weight:600;color:rgba(255,255,255,.85)}
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rx);padding:20px;transition:transform .2s,box-shadow .2s}
+.tip-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.tip-n{font-size:24px;font-weight:900;margin-bottom:10px;line-height:1}
+.tip-title{font-size:13px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.tip-body{font-size:11px;color:var(--ink2);line-height:1.7}
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.faq-card{background:var(--card);border:1px solid var(--border);border-radius:var(--rx);padding:20px}
+.faq-q{font-size:13px;font-weight:700;color:var(--orange);margin-bottom:10px;line-height:1.4}
+.faq-a{font-size:12px;color:var(--ink2);line-height:1.7}
+.faq-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.faq-tag.yes{background:var(--g2);color:var(--g3)}
+.faq-tag.no{background:#FEE2E2;color:#B91C1C}
+/* RESPONSIVE */
+@media (max-width:880px){
+  .scenario-grid,.myth-grid,.tips-grid,.faq-grid,.price-grid,.rules-grid,.heat-summary,.compare-card{grid-template-columns:1fr}
+  .sml .mg{grid-template-columns:1fr}
+  .hook-title{font-size:30px}
+  nav{padding:0 16px;gap:12px}
+  section{padding:48px 16px}
+  .timeline-row{flex-direction:column;gap:16px}
+  .tl-step::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">DiDi Alianza × PT</div>
+  <div class="nav-links">
+    <a href="#hook"    data-i18n="nav_hook">项目概览</a>
+    <a href="#rules"   data-i18n="nav_rules">项目规则</a>
+    <a href="#cal"     data-i18n="nav_cal">核心日历</a>
+    <a href="#pricing" data-i18n="nav_pricing">定价规则</a>
+    <a href="#sim"     data-i18n="nav_sim">收益模拟</a>
+    <a href="#myths"   data-i18n="nav_myths">认知对比</a>
+    <a href="#faq"     data-i18n="nav_faq">Q&amp;A</a>
+  </div>
+  <div class="lang-btn">
+    <button class="lang-opt act" onclick="setLang('zh',this)">中文</button>
+    <button class="lang-opt" onclick="setLang('en',this)">EN</button>
+    <button class="lang-opt" onclick="setLang('es',this)">ES</button>
+  </div>
+  <div class="nav-tag" data-i18n="nav_tag">Copa Mundial 2026</div>
+</nav>
+
+<!-- HOOK -->
+<section id="hook">
+  <div class="hook-eyebrow" data-i18n="hook_eyebrow">DiDi Alianza</div>
+  <h1 class="hook-title" data-i18n-html="hook_title">兼职运力计划 <span>PT Model</span></h1>
+  <p class="hook-sub" data-i18n="hook_sub">世界杯赛期 + 周末高峰，精准补充运力，灵活赚钱</p>
+  <div class="hook-pills">
+    <div class="pill pill-orange" data-i18n="pill1">📅 5月30日 – 7月6日</div>
+    <div class="pill pill-blue"   data-i18n="pill2">⚽ 10个赛事日 + 10个周末日</div>
+    <div class="pill pill-green"  data-i18n="pill3">🏠 邀约制 · 限定Vendor</div>
+  </div>
+  <div class="scenario-grid" id="sc-grid"></div>
+</section>
+
+<hr class="divider">
+
+<!-- RULES -->
+<div class="full-bg-light" id="rules">
+  <div class="inner">
+    <div class="sec-tag" style="color:var(--p3)" data-i18n="rules_tag">项目规则</div>
+    <h2 class="sec-title" data-i18n="rules_title">背景、目标与运营要求</h2>
+    <p class="sec-sub" data-i18n="rules_sub">2026世界杯期间，峰值单量预计提升65–80%，PT Model旨在精准补充周末和赛事日运力缺口</p>
+    <div class="rules-grid">
+      <div class="rule-card">
+        <div class="rule-icon">🎯</div>
+        <div class="rule-title" data-i18n="rule1_title">项目目标</div>
+        <div class="rule-body" data-i18n="rule1_body">① 补充赛事日 + 周末运力缺口　② 挖掘潜在全职候选骑手　③ 控制激励成本，仅在核心时段激活</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">📋</div>
+        <div class="rule-title" data-i18n="rule2_title">参与资格</div>
+        <div class="rule-body" data-i18n="rule2_body">仅限受邀Vendor参与。RM筛选目标Vendor后发出邀约，未受邀Vendor不得参与。报名截止5月31日，平台审核后锁定目标不可更改</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">⚙️</div>
+        <div class="rule-title" data-i18n="rule3_title">在线规则</div>
+        <div class="rule-body" data-i18n="rule3_body">骑手只能在核心日期和时段在线。非规定时段在线的订单按常规考核处理，不享受PT单价。平台通过CURP号维度确保每位骑手同时只能参与一个Model</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🏆</div>
+        <div class="rule-title" data-i18n="rule4_title">FT / PT 双模式</div>
+        <div class="rule-body" data-i18n="rule4_body">Vendor可同时运营FT和PT两个模式，各自独立考核结算。PT Model将于7月6日后暂停，世界杯结束后是否延续待运营数据评估后另行通知</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🔄</div>
+        <div class="rule-title" data-i18n="rule5_title">试合作与转化</div>
+        <div class="rule-body" data-i18n="rule5_body">建议新骑手先以PT身份试合作2天，观察单量密度和稳定性。完美单率≥97%、零3R的骑手优先进入全职候选通道，由RM协助完成FT转化</div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">📊</div>
+        <div class="rule-title" data-i18n="rule6_title">目标骑手画像</div>
+        <div class="rule-body" data-i18n="rule6_body">① 在校学生（周末及赛事日灵活出勤）　② 双业骑手（平日有主职，仅周末有时间）　③ 包裹配送员（有经验、熟路线）</div>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="tl-step">
+        <div class="tl-dot">01</div>
+        <div class="tl-date" data-i18n="tl1_date">5/21–5/31</div>
+        <div class="tl-desc" data-i18n="tl1_desc">招商阶段：RM邀约，Vendor报名，锁定目标</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">02</div>
+        <div class="tl-date" data-i18n="tl2_date">5/30–5/31</div>
+        <div class="tl-desc" data-i18n="tl2_desc">试运行：骑手2天试合作，评估转化潜力</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">03</div>
+        <div class="tl-date" data-i18n="tl3_date">6/1–7/6</div>
+        <div class="tl-desc" data-i18n="tl3_desc">正式运营：激励全开，世界杯赛期 + 周末</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">04</div>
+        <div class="tl-date" data-i18n="tl4_date">7/6后</div>
+        <div class="tl-desc" data-i18n="tl4_desc">评估收尾：PT暂停，优质骑手启动FT转化</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CALENDAR -->
+<section id="cal">
+  <div class="sec-tag" style="color:var(--b3)" data-i18n="cal_tag">核心日历</div>
+  <h2 class="sec-title" data-i18n="cal_title">哪些日期可以接单？</h2>
+  <p class="sec-sub" data-i18n="cal_sub">骑手只能在以下标记日期和时段在线，点击日期查看赛事详情</p>
+
+  <div class="heat-summary" id="heat-summary"></div>
+
+  <div class="total-row">
+    <div class="lbl" data-i18n="total_lbl">合计核心运力保障日（非周末 10 + 周末 10）</div>
+    <div class="grand">20 <span style="font-size:20px;font-weight:500" data-i18n="total_unit">天</span></div>
+  </div>
+
+  <div class="pt-cal-wrap">
+    <div class="pt-cal-header">
+      <div class="pt-dow" data-i18n="dow_mon">一</div>
+      <div class="pt-dow" data-i18n="dow_tue">二</div>
+      <div class="pt-dow" data-i18n="dow_wed">三</div>
+      <div class="pt-dow" data-i18n="dow_thu">四</div>
+      <div class="pt-dow" data-i18n="dow_fri">五</div>
+      <div class="pt-dow we" data-i18n="dow_sat">六</div>
+      <div class="pt-dow we" data-i18n="dow_sun">日</div>
+    </div>
+    <div id="pt-cal-body"></div>
+  </div>
+  <div class="pt-cal-legend">
+    <div class="cleg"><div class="cleg-dot" style="background:var(--orange)"></div><span data-i18n="leg_wknd">周末 · 13:00–22:59</span></div>
+    <div class="cleg"><div class="cleg-dot" style="background:rgba(239,68,68,.25);border:1px solid rgba(239,68,68,.5)"></div><span data-i18n="leg_mex">⚽ MEX 赛事日 · 赛程±2小时</span></div>
+    <div class="cleg"><div class="cleg-dot" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.4)"></div><span data-i18n="leg_hot">高热赛事日 · 18:00–23:00</span></div>
+    <div class="cleg"><div class="cleg-dot" style="background:var(--bg2);border:1px solid var(--border)"></div><span data-i18n="leg_norm">普通日（非激励）</span></div>
+    <div style="margin-left:auto;font-size:11px;color:var(--ink3);font-style:italic" data-i18n="leg_hint">点击日期查看详情</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="sec-tag" style="color:var(--g3)" data-i18n="price_tag">定价规则</div>
+  <h2 class="sec-title" data-i18n="price_title">单均收益 & 扣罚标准</h2>
+  <p class="sec-sub" data-i18n="price_sub">完美单率越高、单量越多，单均收益越高</p>
+  <div class="price-grid">
+    <div class="price-card tier-a">
+      <div class="price-tier-label green" data-i18n="tier_a_label">档位 A · 日单量 ≤ 20</div>
+      <div class="price-main green">$50</div>
+      <div class="price-unit" data-i18n="per_perfect">/完美单</div>
+      <div class="price-cond green" data-i18n="tier_a_cond">非完美单：$15/单 · 完美送达 = 准时 + 圈内</div>
+    </div>
+    <div class="price-card tier-b">
+      <div class="price-tier-label blue" data-i18n="tier_b_label">档位 B · 日单量 &gt; 20</div>
+      <div class="price-main blue">$53</div>
+      <div class="price-unit" data-i18n="per_perfect">/完美单</div>
+      <div class="price-cond blue" data-i18n="tier_b_cond">非完美单：$15/单 · 超过20单自动升档</div>
+    </div>
+  </div>
+  <div class="bonus-card">
+    <div class="bonus-icon">🎯</div>
+    <div>
+      <div class="bonus-amount">+$2 <span style="font-size:14px;font-weight:500;color:var(--orange-d)" data-i18n="bonus_unit">/单</span></div>
+      <div class="bonus-desc" data-i18n="bonus_desc">达到平台下发的PT在线人数目标，额外加2比索/单（结算至Vendor）</div>
+    </div>
+  </div>
+  <div style="margin-top:24px">
+    <div class="penalty-card">
+      <div class="pen-head" data-i18n="pen_head">⚠ 扣罚标准</div>
+      <div class="pen-row">
+        <div class="pen-type" data-i18n="pen1_type">3R（三次拒单）</div>
+        <div class="pen-amount">−$30</div>
+        <div class="pen-note" data-i18n="pen1_note">/次，每次独立计算</div>
+      </div>
+      <div class="pen-row">
+        <div class="pen-type" data-i18n="pen2_type">D责取消（Duty Cancel）</div>
+        <div class="pen-amount" data-i18n="pen2_amount">全额餐损</div>
+        <div class="pen-note" data-i18n="pen2_note">由Vendor负责追偿</div>
+      </div>
+      <div class="pen-row">
+        <div class="pen-type" data-i18n="pen3_type">非核心时段在线</div>
+        <div class="pen-amount" data-i18n="pen3_amount">不计PT激励</div>
+        <div class="pen-note" data-i18n="pen3_note">按常规考核处理</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SIMULATOR -->
+<div class="full-bg-light" id="sim">
+  <div class="inner">
+    <div class="sec-tag" style="color:var(--orange)" data-i18n="sim_tag">收益模拟器</div>
+    <h2 class="sec-title" data-i18n="sim_title">拖动滑块，实时计算你的PT收益</h2>
+    <p class="sec-sub" data-i18n="sim_sub">基于真实定价公式，所有数字实时联动</p>
+    <div class="sim-wrap">
+      <div class="sml">
+        <div class="mg">
+          <div class="lp">
+            <div class="lph" data-i18n="sim_inputs">参数设置</div>
+            <div class="sr">
+              <label data-i18n="lbl_days">活跃天数（最多20天）</label>
+              <span class="sv" id="S_days-v">12</span>
+              <input type="range" id="S_days" min="1" max="20" step="1" value="12">
+            </div>
+            <div class="sr">
+              <label data-i18n="lbl_opd">日均单量</label>
+              <span class="sv" id="S_opd-v">18</span>
+              <input type="range" id="S_opd" min="5" max="40" step="1" value="18">
+            </div>
+            <div class="sr">
+              <label data-i18n="lbl_pr">完美单率</label>
+              <span class="sv" id="S_pr-v">97%</span>
+              <input type="range" id="S_pr" min="50" max="100" step="1" value="97">
+            </div>
+            <div class="tog-row">
+              <div class="tog-label" data-i18n="lbl_bonus">人数目标达标奖励</div>
+              <div class="tog-btns">
+                <button class="togb" id="tog_yes" onclick="S.bonus=1;updateToggle();update()" data-i18n="tog_yes">达标</button>
+                <button class="togb act" id="tog_no"  onclick="S.bonus=0;updateToggle();update()" data-i18n="tog_no">未达标</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="totkard">
+              <div class="tkl" data-i18n="out_total_lbl">预计PT总收益</div>
+              <div class="tkn" id="out_total">—</div>
+              <div class="tks" id="out_sub">—</div>
+            </div>
+            <div class="brow">
+              <div class="blbl"><span data-i18n="bar_perfect">完美单收益</span><span class="bval" id="bv_perfect">—</span></div>
+              <div class="bwrap"><div class="bfill" id="bar_perfect" style="background:var(--g1)"></div></div>
+            </div>
+            <div class="brow">
+              <div class="blbl"><span data-i18n="bar_imperfect">非完美单收益</span><span class="bval" id="bv_imperfect">—</span></div>
+              <div class="bwrap"><div class="bfill" id="bar_imperfect" style="background:var(--a1)"></div></div>
+            </div>
+            <div class="brow">
+              <div class="blbl"><span data-i18n="bar_bonus">人数达标奖励</span><span class="bval" id="bv_bonus">—</span></div>
+              <div class="bwrap"><div class="bfill" id="bar_bonus" style="background:var(--orange)"></div></div>
+            </div>
+            <div class="sim-note green" id="sim_note_tier">—</div>
+            <div class="rg">
+              <div class="rcd">
+                <div class="rcd-lbl" data-i18n="rcd_nobonuslbl">无人数奖励</div>
+                <div class="rcd-num" id="rcd_nobonus" style="color:var(--ink2)">—</div>
+                <div class="rcd-sub" id="rcd_nobonus_sub">—</div>
+              </div>
+              <div class="vsep">VS</div>
+              <div class="rcd" style="border-color:var(--orange)">
+                <div class="rcd-lbl" style="color:var(--orange)" data-i18n="rcd_bonuslbl">达标奖励</div>
+                <div class="rcd-num" id="rcd_bonus" style="color:var(--orange)">—</div>
+                <div class="rcd-sub" id="rcd_bonus_sub">—</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MYTHS -->
+<div class="full-bg-dark" id="myths">
+  <div class="inner">
+    <div class="sec-tag" style="color:var(--orange)" data-i18n="myth_tag">FT vs PT · 认知对比</div>
+    <h2 class="sec-title" style="color:#fff" data-i18n="myth_title">选择适合自己的模式</h2>
+    <p class="sec-sub" data-i18n="myth_sub">全职和兼职各有优势，了解真实情况再做决定</p>
+    <div class="myth-grid" id="myths-grid"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- TIPS -->
+<section id="tips">
+  <div class="sec-tag" style="color:var(--p3)" data-i18n="tips_tag">操作建议</div>
+  <h2 class="sec-title" data-i18n="tips_title">让PT骑手发挥最大价值</h2>
+  <p class="sec-sub" data-i18n="tips_sub">Vendor和RM的实操指南</p>
+  <div class="tips-grid" id="tips-grid"></div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="sec-tag" style="color:var(--b3)" data-i18n="faq_tag">常见问题</div>
+  <h2 class="sec-title" data-i18n="faq_title">Q &amp; A</h2>
+  <p class="sec-sub" data-i18n="faq_sub">关于PT Model最常被问到的6个问题</p>
+  <div class="faq-grid" id="faq-grid"></div>
+</section>
+
+<div style="background:var(--ink);padding:20px 32px;text-align:center">
+  <div style="font-size:12px;color:rgba(255,255,255,.35)" data-i18n="footer">DiDi Alianza 运营团队 · 文件版本 v3.0 · 2026年5月21日</div>
+</div>
+
+<!-- Modal -->
+<div class="pt-modal" id="pt-modal">
+  <div class="pt-modal-box">
+    <button class="pt-modal-close" id="modal-close">×</button>
+    <div class="pt-modal-date" id="modal-date"></div>
+    <div class="pt-modal-h" id="modal-h"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const e = id => document.getElementById(id);
+const fk = n => '$' + Math.round(n).toLocaleString();
+const fd = n => '$' + (n/1000).toFixed(1) + 'k';
+let curLang = 'zh';
+function U(zh,en,es){ return curLang==='en'?en : curLang==='es'?es : zh; }
+const unit = {
+  day: n => U(n+'天', n+(n===1?' day':' days'), n+(n===1?' día':' días')),
+  ord: n => U(n+'单', n+(n===1?' order':' orders'), n+(n===1?' pedido':' pedidos')),
+};
+
+// ─── PT ACTIVE DATES ───────────────────────────────────────────────────────
+const PT_WKND = new Set(['2026-05-30','2026-05-31','2026-06-06','2026-06-07','2026-06-13','2026-06-14','2026-06-20','2026-06-21','2026-07-04','2026-07-05']);
+const PT_MATCH = {
+  '2026-06-11':{ heat:'mex', flag:'🔥🔥',
+    label:()=>U('MEX vs RSA','MEX vs RSA','MEX vs RSA'),
+    name:()=>U('开幕战 · 墨西哥 vs 南非','Opening Match · Mexico vs South Africa','Partido inaugural · México vs Sudáfrica'),
+    time:'12:00–16:00', venue:()=>U('阿兹台克体育场 · CDMX','Estadio Azteca · CDMX','Estadio Azteca · CDMX'), demand:'+65%~80%' },
+  '2026-06-15':{ heat:'hot', flag:'🔥',
+    label:()=>U('西班牙首战','Spain Opener','Apertura España'),
+    name:()=>U('西班牙 + 德国首战赛日','Spain + Germany openers','Jornada aperturas España + Alemania'),
+    time:'18:00–23:00', venue:'—', demand:'+40%~65%' },
+  '2026-06-16':{ heat:'hot', flag:'🔥',
+    label:()=>U('法国首战','France Opener','Apertura Francia'),
+    name:()=>U('法国 vs 塞内加尔 + 3场小组赛','France vs Senegal + 3 group matches','Francia vs Senegal + 3 partidos de grupos'),
+    time:'18:00–23:00', venue:'—', demand:'+40%~65%' },
+  '2026-06-17':{ heat:'hot', flag:'🔥',
+    label:()=>U('CDMX本地赛','CDMX Local','Local CDMX'),
+    name:()=>U('CDMX本地举办场次 · 乌兹别克 vs 哥伦比亚','CDMX-hosted · Uzbekistan vs Colombia','Local CDMX · Uzbekistán vs Colombia'),
+    time:'18:00–23:00', venue:()=>U('阿兹台克体育场 · CDMX','Estadio Azteca · CDMX','Estadio Azteca · CDMX'), demand:'+40%~65%' },
+  '2026-06-18':{ heat:'mex', flag:'🔥🔥',
+    label:()=>U('MEX vs KOR','MEX vs KOR','MEX vs KOR'),
+    name:()=>U('墨西哥 vs 韩国 · 小组赛第二轮','Mexico vs South Korea · Group Match 2','México vs Corea del Sur · Fase de grupos J2'),
+    time:'18:00–22:00', venue:'—', demand:'+65%~80%' },
+  '2026-06-22':{ heat:'hot', flag:'🔥',
+    label:()=>U('巴西+阿根廷','BRA+ARG','BRA+ARG'),
+    name:()=>U('巴西 + 阿根廷小组赛同日','Brazil + Argentina group stage on same day','Brasil + Argentina en fase de grupos el mismo día'),
+    time:'18:00–23:00', venue:'—', demand:'+40%~65%' },
+  '2026-06-24':{ heat:'mex', flag:'🔥🔥',
+    label:()=>U('MEX vs CZE','MEX vs CZE','MEX vs CZE'),
+    name:()=>U('墨西哥 vs 捷克 · 双城同日小组决战','Mexico vs Czechia · Group decider, both cities','México vs República Checa · Decisivo de grupos'),
+    time:'18:00–22:00', venue:()=>U('CDMX + MTY 同日举办','CDMX + MTY same day','CDMX + MTY mismo día'), demand:'+65%~80%' },
+  '2026-06-29':{ heat:'hot', flag:'🔥',
+    label:()=>U('MTY R32','MTY R32','MTY R32'),
+    name:()=>U('蒙特雷主场 · 32强淘汰赛','Round of 32 at Monterrey','Ronda de 32 en Monterrey'),
+    time:'18:00–23:00', venue:()=>U('蒙特雷体育场 · MTY','Monterrey Stadium · MTY','Estadio Monterrey · MTY'), demand:'+40%~65%' },
+  '2026-06-30':{ heat:'mex', flag:'🔥🔥',
+    label:()=>U('CDMX R32','CDMX R32','CDMX R32'),
+    name:()=>U('阿兹台克 · 32强淘汰赛 · 雨季峰值','Azteca · Round of 32 · Peak Rain Season','Azteca · Ronda de 32 · Pico temporada de lluvias'),
+    time:'16:00–21:00', venue:()=>U('阿兹台克体育场 · CDMX','Estadio Azteca · CDMX','Estadio Azteca · CDMX'), demand:'+65%~80%' },
+  '2026-07-06':{ heat:'hot', flag:'🔥',
+    label:()=>U('R16 · 延长日','R16 · Extended','R16 · Extendido'),
+    name:()=>U('16强赛事日 · 计划延长最后一天','Round of 16 · Program extended final day','Ronda de 16 · Último día extendido del programa'),
+    time:'18:00–23:00', venue:'—', demand:'+40%~65%' },
+};
+
+const PT_ALL_ACTIVE = new Set([...PT_WKND, ...Object.keys(PT_MATCH)]);
+
+function inPeriod(d){ return d >= '2026-05-30' && d <= '2026-07-06'; }
+
+// ─── LANG ─────────────────────────────────────────────────────────────────
+const LANG = {
+  zh:{
+    nav_hook:'项目概览', nav_rules:'项目规则', nav_cal:'核心日历', nav_pricing:'定价规则',
+    nav_sim:'收益模拟', nav_myths:'认知对比', nav_faq:'Q&A', nav_tag:'Copa Mundial 2026',
+    hook_eyebrow:'DiDi Alianza',
+    hook_title:'兼职运力计划 <span>PT Model</span>',
+    hook_sub:'世界杯赛期 + 周末高峰，精准补充运力，灵活赚钱',
+    pill1:'📅 5月30日 – 7月6日', pill2:'⚽ 10个赛事日 + 10个周末日', pill3:'🏠 邀约制 · 限定Vendor',
+    rules_tag:'项目规则', rules_title:'背景、目标与运营要求',
+    rules_sub:'2026世界杯期间，峰值单量预计提升65–80%，PT Model旨在精准补充周末和赛事日运力缺口',
+    rule1_title:'项目目标', rule1_body:'① 补充赛事日 + 周末运力缺口　② 挖掘潜在全职候选骑手　③ 控制激励成本，仅在核心时段激活',
+    rule2_title:'参与资格', rule2_body:'仅限受邀Vendor参与。RM筛选目标Vendor后发出邀约，未受邀Vendor不得参与。报名截止5月31日，平台审核后锁定目标不可更改',
+    rule3_title:'在线规则', rule3_body:'骑手只能在核心日期和时段在线。非规定时段在线的订单按常规考核处理，不享受PT单价。平台通过CURP号确保每位骑手同时只能参与一个Model',
+    rule4_title:'FT / PT 双模式', rule4_body:'Vendor可同时运营FT和PT两个模式，各自独立考核结算。PT Model将于7月6日后暂停，世界杯结束后是否延续待评估',
+    rule5_title:'试合作与转化', rule5_body:'建议新骑手先以PT身份试合作2天，观察单量密度和稳定性。完美单率≥97%、零3R的骑手优先进入全职候选通道',
+    rule6_title:'目标骑手画像', rule6_body:'① 在校学生（周末及赛事日灵活出勤）　② 双业骑手（平日有主职，仅周末有时间）　③ 包裹配送员（有经验、熟路线）',
+    tl1_date:'5/21–5/31', tl1_desc:'招商阶段：RM邀约，Vendor报名，锁定目标',
+    tl2_date:'5/30–5/31', tl2_desc:'试运行：骑手2天试合作，评估转化潜力',
+    tl3_date:'6/1–7/6',   tl3_desc:'正式运营：激励全开，世界杯赛期 + 周末',
+    tl4_date:'7/6后',      tl4_desc:'评估收尾：PT暂停，优质骑手启动FT转化',
+    cal_tag:'核心日历', cal_title:'哪些日期可以接单？',
+    cal_sub:'骑手只能在以下标记日期和时段在线，点击日期查看赛事详情',
+    total_lbl:'合计核心运力保障日（非周末 10 + 周末 10）', total_unit:'天',
+    dow_mon:'一', dow_tue:'二', dow_wed:'三', dow_thu:'四', dow_fri:'五', dow_sat:'六', dow_sun:'日',
+    leg_wknd:'周末 · 13:00–22:59', leg_mex:'⚽ MEX赛事日 · 赛程±2小时',
+    leg_hot:'高热赛事日 · 18:00–23:00', leg_norm:'普通日（非激励）', leg_hint:'点击日期查看详情',
+    price_tag:'定价规则', price_title:'单均收益 & 扣罚标准',
+    price_sub:'完美单率越高、单量越多，单均收益越高',
+    tier_a_label:'档位 A · 日单量 ≤ 20', tier_b_label:'档位 B · 日单量 > 20',
+    per_perfect:'/完美单',
+    tier_a_cond:'非完美单：$15/单 · 完美送达 = 准时 + 圈内',
+    tier_b_cond:'非完美单：$15/单 · 超过20单自动升档',
+    bonus_unit:'/单', bonus_desc:'达到平台下发的PT在线人数目标，额外加2比索/单（结算至Vendor）',
+    pen_head:'⚠ 扣罚标准',
+    pen1_type:'3R（三次拒单）', pen1_note:'/次，每次独立计算',
+    pen2_type:'D责取消（Duty Cancel）', pen2_amount:'全额餐损', pen2_note:'由Vendor负责追偿',
+    pen3_type:'非核心时段在线', pen3_amount:'不计PT激励', pen3_note:'按常规考核处理',
+    sim_tag:'收益模拟器', sim_title:'拖动滑块，实时计算你的PT收益',
+    sim_sub:'基于真实定价公式，所有数字实时联动',
+    sim_inputs:'参数设置',
+    lbl_days:'活跃天数（最多20天）', lbl_opd:'日均单量', lbl_pr:'完美单率',
+    lbl_bonus:'人数目标达标奖励', tog_yes:'达标', tog_no:'未达标',
+    out_total_lbl:'预计PT总收益',
+    bar_perfect:'完美单收益', bar_imperfect:'非完美单收益', bar_bonus:'人数达标奖励',
+    rcd_nobonuslbl:'无人数奖励', rcd_bonuslbl:'达标奖励',
+    myth_tag:'FT vs PT · 认知对比', myth_title:'选择适合自己的模式',
+    myth_sub:'全职和兼职各有优势，了解真实情况再做决定',
+    tips_tag:'操作建议', tips_title:'让PT骑手发挥最大价值',
+    tips_sub:'Vendor和RM的实操指南',
+    faq_tag:'常见问题', faq_title:'Q & A',
+    faq_sub:'关于PT Model最常被问到的6个问题',
+    footer:'DiDi Alianza 运营团队 · 文件版本 v3.0 · 2026年5月21日',
+    modal_window:'核心在线时段', modal_venue:'举办地点', modal_heat:'热度等级', modal_demand:'预估需求',
+    modal_type_wknd:'周末 · 全天运营', modal_type_mex:'⚽ MEX赛事日', modal_type_hot:'高热赛事日',
+  },
+  en:{
+    nav_hook:'Overview', nav_rules:'Rules', nav_cal:'Calendar', nav_pricing:'Pricing',
+    nav_sim:'Simulator', nav_myths:'FT vs PT', nav_faq:'Q&A', nav_tag:'World Cup 2026',
+    hook_eyebrow:'DiDi Alianza',
+    hook_title:'Part-Time Courier Program <span>PT Model</span>',
+    hook_sub:'World Cup match days + weekend peaks — flexible supply, flexible earnings',
+    pill1:'📅 May 30 – July 6', pill2:'⚽ 10 match days + 10 weekend days', pill3:'🏠 Invitation-only',
+    rules_tag:'Program Rules', rules_title:'Background, Goals & Operational Requirements',
+    rules_sub:'During the 2026 World Cup, peak demand is projected to rise 65–80%. PT Model precisely bridges supply gaps on weekends and match days',
+    rule1_title:'Objectives', rule1_body:'① Bridge supply gaps on match days + weekends  ② Identify FT courier candidates  ③ Cost-controlled: incentives activate only during core windows',
+    rule2_title:'Eligibility', rule2_body:'Invitation-only. RMs select and invite target vendors. Non-invited vendors cannot participate. Registration closes May 31; targets are locked after platform approval',
+    rule3_title:'Online Rules', rule3_body:'Couriers may only go online on core dates within their assigned time windows. Orders outside windows are processed under standard evaluation. CURP ID enforcement ensures one model per courier',
+    rule4_title:'FT / PT Dual Model', rule4_body:'Vendors can run FT and PT simultaneously — each with independent evaluation. PT Model suspends after July 6; continuation post-World Cup subject to data review',
+    rule5_title:'Trial & Conversion', rule5_body:'New couriers are recommended to do a 2-day trial under PT status. Couriers with ≥97% perfect-order rate and zero 3R are prioritized for the FT conversion pipeline',
+    rule6_title:'Target Courier Profiles', rule6_body:'① Students (flexible on weekends and match days)  ② Dual-job workers (weekdays committed, weekends free)  ③ Parcel couriers (experienced, route-familiar)',
+    tl1_date:'May 21–31', tl1_desc:'Recruitment: RM invites, vendors register, targets locked',
+    tl2_date:'May 30–31', tl2_desc:'Trial run: 2-day pilot, assess FT conversion potential',
+    tl3_date:'Jun 1 – Jul 6', tl3_desc:'Live operations: full incentives, World Cup + weekends',
+    tl4_date:'Post Jul 6',  tl4_desc:'Wind-down: PT suspends, top couriers enter FT pipeline',
+    cal_tag:'Core Calendar', cal_title:'Which dates can couriers go online?',
+    cal_sub:'Couriers may ONLY go online on the highlighted dates within assigned time windows. Click a date for details',
+    total_lbl:'Total Core Coverage Days (10 Non-Weekends + 10 Weekends)', total_unit:'days',
+    dow_mon:'Mon', dow_tue:'Tue', dow_wed:'Wed', dow_thu:'Thu', dow_fri:'Fri', dow_sat:'Sat', dow_sun:'Sun',
+    leg_wknd:'Weekend · 13:00–22:59', leg_mex:'⚽ MEX Match Day · Kickoff ±2hrs',
+    leg_hot:'High-Heat Match Day · 18:00–23:00', leg_norm:'Regular day (no incentive)', leg_hint:'Click a date for details',
+    price_tag:'Pricing Rules', price_title:'Per-Order Earnings & Penalties',
+    price_sub:'Higher perfect-order rate and more orders = higher per-order income',
+    tier_a_label:'Tier A · Daily orders ≤ 20', tier_b_label:'Tier B · Daily orders > 20',
+    per_perfect:'/perfect order',
+    tier_a_cond:'Non-perfect: $15/order · Perfect = on-time + in-zone',
+    tier_b_cond:'Non-perfect: $15/order · Upgrades auto above 20 orders',
+    bonus_unit:'/order', bonus_desc:'When vendor meets platform PT headcount target, +$2/order bonus (paid to vendor)',
+    pen_head:'⚠ Penalty Standards',
+    pen1_type:'3R (Triple Rejection)', pen1_note:'/occurrence, counted independently',
+    pen2_type:'D-Responsibility Cancel (Duty Cancel)', pen2_amount:'Full food-loss coverage', pen2_note:'Vendor responsible for recovery',
+    pen3_type:'Online outside core hours', pen3_amount:'No PT incentive', pen3_note:'Processed under standard model',
+    sim_tag:'Earnings Simulator', sim_title:'Drag the sliders — see your PT earnings live',
+    sim_sub:'Real pricing formulas, all numbers update instantly',
+    sim_inputs:'Parameters',
+    lbl_days:'Active days (max 20)', lbl_opd:'Daily orders', lbl_pr:'Perfect order rate',
+    lbl_bonus:'Headcount target bonus', tog_yes:'Target met', tog_no:'Not met',
+    out_total_lbl:'Projected PT total earnings',
+    bar_perfect:'Perfect order revenue', bar_imperfect:'Non-perfect order revenue', bar_bonus:'Headcount bonus',
+    rcd_nobonuslbl:'Without bonus', rcd_bonuslbl:'With bonus',
+    myth_tag:'FT vs PT · Reality Check', myth_title:'Choose the right model for you',
+    myth_sub:'Full-time and part-time both have their advantages — understand the real picture before deciding',
+    tips_tag:'Action Guide', tips_title:'Maximize PT Courier Value',
+    tips_sub:'Operational tips for vendors and RMs',
+    faq_tag:'FAQ', faq_title:'Q & A',
+    faq_sub:'The 6 most common questions about PT Model',
+    footer:'DiDi Alianza Operations Team · Document v3.0 · May 21, 2026',
+    modal_window:'Active Window', modal_venue:'Venue', modal_heat:'Heat Tier', modal_demand:'Est. Demand',
+    modal_type_wknd:'Weekend · Full day', modal_type_mex:'⚽ MEX Match Day', modal_type_hot:'High-Heat Match Day',
+  },
+  es:{
+    nav_hook:'Resumen', nav_rules:'Reglas', nav_cal:'Calendario', nav_pricing:'Precios',
+    nav_sim:'Simulador', nav_myths:'FT vs PT', nav_faq:'P&R', nav_tag:'Copa Mundial 2026',
+    hook_eyebrow:'DiDi Alianza',
+    hook_title:'Programa de Medio Tiempo <span>Modelo PT</span>',
+    hook_sub:'Días de partido + fines de semana pico — oferta flexible, ingresos flexibles',
+    pill1:'📅 30 mayo – 6 julio', pill2:'⚽ 10 días de partido + 10 fines de semana', pill3:'🏠 Solo por invitación',
+    rules_tag:'Reglas del Programa', rules_title:'Antecedentes, Objetivos y Requisitos Operativos',
+    rules_sub:'Durante el Mundial 2026, se proyecta un aumento de demanda del 65–80%. El Modelo PT cubre precisamente los gaps de oferta en fines de semana y días de partido',
+    rule1_title:'Objetivos', rule1_body:'① Cubrir gaps de oferta en días de partido + fines de semana  ② Identificar candidatos FT  ③ Costo controlado: incentivos solo en ventanas clave',
+    rule2_title:'Elegibilidad', rule2_body:'Solo vendors invitados. Los RMs seleccionan e invitan. Los no invitados no pueden participar. Registro cierra el 31 de mayo; las metas quedan bloqueadas tras aprobación',
+    rule3_title:'Reglas de Conexión', rule3_body:'Los repartidores solo pueden conectarse en fechas clave dentro de sus ventanas. Pedidos fuera de ventana bajo evaluación estándar. CURP garantiza un modelo por repartidor',
+    rule4_title:'Modelo Dual FT / PT', rule4_body:'Los vendors pueden operar FT y PT simultáneamente, cada uno con evaluación independiente. Modelo PT suspende tras el 6 de julio; continuación sujeta a revisión de datos',
+    rule5_title:'Prueba y Conversión', rule5_body:'Se recomienda que los nuevos repartidores hagan 2 días de prueba en modo PT. Los de ≥97% de pedido perfecto y cero 3R tienen prioridad para conversión FT',
+    rule6_title:'Perfiles Objetivo', rule6_body:'① Estudiantes (flexibles fines de semana y días de partido)  ② Trabajadores con doble empleo  ③ Repartidores de paquetería (experimentados)',
+    tl1_date:'21–31 may', tl1_desc:'Reclutamiento: RMs invitan, vendors se registran',
+    tl2_date:'30–31 may', tl2_desc:'Prueba piloto: 2 días, evaluar potencial de conversión FT',
+    tl3_date:'1 jun – 6 jul', tl3_desc:'Operación activa: incentivos completos, Mundial + fines de semana',
+    tl4_date:'Post 6 jul',  tl4_desc:'Cierre: PT suspende, mejores repartidores entran a conversión FT',
+    cal_tag:'Calendario Clave', cal_title:'¿En qué fechas pueden conectarse los repartidores?',
+    cal_sub:'Los repartidores SOLO pueden conectarse en las fechas marcadas. Haz clic en una fecha para ver detalles',
+    total_lbl:'Total días clave de cobertura (10 no fines de semana + 10 fines de semana)', total_unit:'días',
+    dow_mon:'Lun', dow_tue:'Mar', dow_wed:'Mié', dow_thu:'Jue', dow_fri:'Vie', dow_sat:'Sáb', dow_sun:'Dom',
+    leg_wknd:'Fin de semana · 13:00–22:59', leg_mex:'⚽ Día partido MEX · Patada ±2hrs',
+    leg_hot:'Día partido alta demanda · 18:00–23:00', leg_norm:'Día normal (sin incentivo)', leg_hint:'Haz clic para ver detalles',
+    price_tag:'Reglas de Precios', price_title:'Tarifa por pedido y penalizaciones',
+    price_sub:'Mayor tasa de pedido perfecto y más pedidos = mayor ingreso',
+    tier_a_label:'Nivel A · Pedidos diarios ≤ 20', tier_b_label:'Nivel B · Pedidos diarios > 20',
+    per_perfect:'/pedido perfecto',
+    tier_a_cond:'No perfecto: $15/pedido · Perfecto = a tiempo + en zona',
+    tier_b_cond:'No perfecto: $15/pedido · Sube automáticamente sobre 20 pedidos',
+    bonus_unit:'/pedido', bonus_desc:'Cuando el vendor alcanza la meta PT de cobertura, +$2/pedido (se paga al vendor)',
+    pen_head:'⚠ Penalizaciones',
+    pen1_type:'3R (Triple Rechazo)', pen1_note:'/ocurrencia, cada una cuenta independientemente',
+    pen2_type:'Cancelación D-Responsabilidad (Duty Cancel)', pen2_amount:'Cubre pérdida total', pen2_note:'El vendor es responsable de la recuperación',
+    pen3_type:'Conexión fuera de horario', pen3_amount:'Sin incentivo PT', pen3_note:'Bajo modelo estándar',
+    sim_tag:'Simulador de Ingresos', sim_title:'Desliza los controles — ve tus ganancias PT en vivo',
+    sim_sub:'Fórmulas de precios reales, números actualizados al instante',
+    sim_inputs:'Parámetros',
+    lbl_days:'Días activos (máx 20)', lbl_opd:'Pedidos diarios', lbl_pr:'Tasa pedido perfecto',
+    lbl_bonus:'Bono meta de cobertura', tog_yes:'Meta alcanzada', tog_no:'No alcanzada',
+    out_total_lbl:'Ganancias PT totales proyectadas',
+    bar_perfect:'Ingresos pedido perfecto', bar_imperfect:'Ingresos pedido no perfecto', bar_bonus:'Bono de cobertura',
+    rcd_nobonuslbl:'Sin bono', rcd_bonuslbl:'Con bono',
+    myth_tag:'FT vs PT · Realidad', myth_title:'Elige el modelo que te conviene',
+    myth_sub:'Tiempo completo y medio tiempo tienen sus ventajas — conoce la realidad antes de decidir',
+    tips_tag:'Guía de Acción', tips_title:'Maximiza el valor de los repartidores PT',
+    tips_sub:'Guía operativa para vendors y RMs',
+    faq_tag:'Preguntas Frecuentes', faq_title:'P & R',
+    faq_sub:'Las 6 preguntas más frecuentes sobre el Modelo PT',
+    footer:'Equipo de Operaciones DiDi Alianza · Documento v3.0 · 21 de mayo de 2026',
+    modal_window:'Ventana activa', modal_venue:'Sede', modal_heat:'Nivel de demanda', modal_demand:'Demanda estimada',
+    modal_type_wknd:'Fin de semana · Todo el día', modal_type_mex:'⚽ Día partido MEX', modal_type_hot:'Día partido alta demanda',
+  }
+};
+
+// ─── SECTIONS Layer B ─────────────────────────────────────────────────────
+function getMythHTML(){
+  const myths = [
+    // MYTH 1: FT vs PT balanced comparison
+    {
+      n: U('模式对比 01','Model Compare 01','Comparativa 01'),
+      wrong: U('"兼职和全职赚的一样多"','"PT earns as much as FT"','"El PT gana igual que el FT"'),
+      right_tag: U('✓ 客观认知','✓ Reality','✓ Realidad'),
+      right: U('两者都能赚钱，但适合不同的人。全职整体收入更高，适合以此为主业、每天稳定出勤的骑手；兼职整体收入较低，但适合真正意义上只能周末或特定日期出勤的人，是额外收入的好选择。',
+        'Both can earn. FT generates higher total income but requires stable daily attendance. PT generates lower total income but is ideal for people who genuinely can only work on weekends or specific days — excellent as supplemental income.',
+        'Ambos generan ingresos, pero para personas diferentes. FT genera mayores ingresos totales pero requiere asistencia diaria estable. PT genera menos en total, pero es ideal para quienes solo pueden trabajar fines de semana — excelente ingreso complementario.'),
+      compareCards: true,
+    },
+    // MYTH 2: time windows
+    {
+      n: U('误区 02','Myth 02','Mito 02'),
+      wrong: U('"规定日期可以随时在线"','"On required days, couriers can go online anytime"','"En días requeridos se puede conectar a cualquier hora"'),
+      right_tag: U('✓ 实际情况','✓ Reality','✓ Realidad'),
+      right: U('骑手必须在规定的时间窗口内在线。周末为13:00–22:59，世界杯赛事日为开球前后各2小时。在非时段接单不计入PT激励，将按常规考核处理。',
+        'Couriers must be online within the assigned time window. Weekends: 13:00–22:59. Match days: Kickoff ±2 hours. Orders outside the window do NOT qualify for PT incentives.',
+        'Los repartidores deben estar en línea en la ventana asignada. Fines de semana: 13:00–22:59. Días de partido: Patada ±2 horas. Pedidos fuera de ventana NO califican para incentivos PT.'),
+      stats:[
+        {k:U('周末有效时段','Weekend active window','Ventana activa fin de semana'), v:'13:00–22:59', cls:'hi'},
+        {k:U('赛事日时段（MEX赛）','Match day (MEX game)','Ventana día de partido'), v:'12:00–16:00 / 18:00–22:00', cls:'hi'},
+      ],
+      highlight: U('非时段接单 → 按常规FT/标准考核，不享受PT定价',
+        'Outside-window orders → standard evaluation, no PT pricing',
+        'Pedidos fuera de ventana → evaluación estándar, sin precio PT')
+    },
+    // MYTH 3: subsidies
+    {
+      n: U('误区 03','Myth 03','Mito 03'),
+      wrong: U('"PT骑手不能享受雨天和高温补贴"','"PT couriers cannot get rain or heat subsidies"','"Los repartidores PT no reciben subsidios de lluvia/calor"'),
+      right_tag: U('✓ 实际情况','✓ Reality','✓ Realidad'),
+      right: U('雨天和高温补贴是骑手基础权益，与参与哪个Model无关。PT骑手同样可以享有这两项补贴。唯一不享有的是积分累计和PK赛奖金。',
+        'Rain and heat subsidies are base courier benefits, independent of model enrollment. PT couriers receive both. The only exclusions are points accumulation and PK tournament bonuses.',
+        'Los subsidios de lluvia y calor son prestaciones base del repartidor, independientes del modelo. Los repartidores PT los reciben. Solo se excluyen: acumulación de puntos y torneos PK.'),
+      stats:[
+        {k:U('雨天补贴','Rain subsidy','Subsidio lluvia'), v:'✓ '+U('PT可享','PT eligible','PT elegible'), cls:'hi'},
+        {k:U('高温补贴','Heat subsidy','Subsidio calor'), v:'✓ '+U('PT可享','PT eligible','PT elegible'), cls:'hi'},
+        {k:U('积分 / PK赛','Points / PK','Puntos / PK'), v:'✗ '+U('不参与','Not eligible','No elegible'), cls:'lo'},
+      ],
+      highlight: U('💡 核心收入 = 固定单价 + 雨天/高温补贴，不参与积分和PK',
+        '💡 Core income = fixed rate + rain/heat subsidy — no points or PK',
+        '💡 Ingreso base = tarifa fija + subsidios — sin puntos ni PK')
+    },
+    // MYTH 4: dual model
+    {
+      n: U('误区 04','Myth 04','Mito 04'),
+      wrong: U('"参加PT就不能同时运营FT了"','"Joining PT means you cannot run FT"','"Unirse al PT significa que no puedes operar FT"'),
+      right_tag: U('✓ 实际情况','✓ Reality','✓ Realidad'),
+      right: U('Vendor可以同时运营FT和PT两个模式，两套体系完全独立考核和结算。唯一限制是同一个骑手同时只能属于一个Model，通过CURP号在平台层面识别和管控。',
+        'Vendors can run FT and PT simultaneously — completely independent evaluation and settlement. The only restriction is that one courier can only be in ONE model at a time, enforced at the CURP ID level.',
+        'Los vendors pueden operar FT y PT simultáneamente — evaluación y liquidación completamente independientes. La única restricción: un repartidor solo puede estar en UN modelo, aplicado a nivel CURP.'),
+      stats:[
+        {k:U('FT考核','FT eval','Evaluación FT'), v:U('独立运行','Independent','Independiente'), cls:'hi'},
+        {k:U('PT考核','PT eval','Evaluación PT'), v:U('独立运行','Independent','Independiente'), cls:'hi'},
+      ],
+      highlight: U('⚠ 同一骑手同时只能参与一个Model，多账号行为将被永久封禁',
+        '⚠ One courier = one model at a time. Multi-account behavior = permanent ban',
+        '⚠ Un repartidor = un modelo a la vez. Multi-cuenta = suspensión permanente')
+    }
+  ];
+  return myths.map(m => {
+    let inner = '<div class="myth-card"><div class="myth-n">'+m.n+'</div>';
+    inner += '<div class="myth-wrong"><div class="mw-tag">❌ '+U('说法','Claim','Afirmación')+'</div><div class="mw-text">"'+m.wrong+'"</div></div>';
+    inner += '<div class="mr-tag">'+m.right_tag+'</div><div class="mr-text">'+m.right+'</div>';
+    if(m.compareCards){
+      inner += '<div class="compare-card">';
+      inner += '<div class="cmp-col ft"><div class="cmp-col-h">✅ '+U('全职（FT）','Full-Time (FT)','Tiempo Completo (FT)')+'</div>';
+      inner += '<div class="cmp-row">'+U('总收入','Total income','Ingresos totales')+': <span>'+U('高','Higher','Mayor')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('出勤要求','Attendance','Asistencia')+': <span>'+U('每日稳定出勤','Daily stable','Diaria estable')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('适合','Best for','Para quién')+': <span>'+U('以配送为主业','Primary income source','Ingreso principal')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('积分/PK','Points/PK','Puntos/PK')+': <span>✓ '+U('参与','Eligible','Elegible')+'</span></div></div>';
+      inner += '<div class="cmp-col pt"><div class="cmp-col-h">🌟 '+U('兼职（PT）','Part-Time (PT)','Medio Tiempo (PT)')+'</div>';
+      inner += '<div class="cmp-row">'+U('总收入','Total income','Ingresos totales')+': <span>'+U('较低','Lower','Menor')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('出勤要求','Attendance','Asistencia')+': <span>'+U('仅核心日期时段','Core days only','Solo días clave')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('适合','Best for','Para quién')+': <span>'+U('真正的兼职/副业','Genuine side earners','Ingreso complementario')+'</span></div>';
+      inner += '<div class="cmp-row">'+U('灵活性','Flexibility','Flexibilidad')+': <span>✓ '+U('高','High','Alta')+'</span></div></div>';
+      inner += '</div>';
+      inner += '<div class="highlight-row">'+U('💡 两种模式均正向，选择取决于你的时间和收入目标',
+        '💡 Both models are positive — choose based on your availability and income goals',
+        '💡 Ambos modelos son positivos — elige según tu disponibilidad y objetivos de ingreso')+'</div>';
+    } else if(m.stats){
+      inner += m.stats.map(s=>'<div class="myth-stat"><span class="mk">'+s.k+'</span><span class="mv '+s.cls+'">'+s.v+'</span></div>').join('<div class="myth-vs">·</div>');
+      inner += '<div class="highlight-row">'+m.highlight+'</div>';
+    }
+    inner += '</div>';
+    return inner;
+  }).join('');
+}
+
+function getTipsHTML(){
+  const tips = [
+    { n:'⚽', title: U('赛事日提前2小时上线','Be online 2 hrs before kickoff','Conéctate 2 hrs antes del pitido'),
+      body: U('世界杯赛事日订单在开赛前就开始激增。提前在线可以抢到更多单，并避免进入高峰后的系统拥堵',
+        'Match-day orders spike before kickoff. Getting online early captures more orders and avoids congestion',
+        'Los pedidos del día de partido aumentan antes del pitido. Conectarse temprano captura más pedidos'), color:'#3B8ACC' },
+    { n:'📅', title: U('周末13:00准时上线','Go online at 13:00 sharp on weekends','Conéctate a las 13:00 los fines de semana'),
+      body: U('周末激励时段从13:00开始。在此之前接单不享受PT单价。提前备好设备、确认位置',
+        'Weekend incentive windows start at 13:00. Orders before that do not qualify for PT rates',
+        'Las ventanas de incentivos empiezan a las 13:00. Los pedidos anteriores no califican'), color:'var(--orange)' },
+    { n:'🎯', title: U('维持97%完美单率','Maintain 97% perfect order rate','Mantén 97% de tasa de pedido perfecto'),
+      body: U('完美单率是PT骑手最核心的KPI。超过20单后，每个完美单从50升到53比索。引导骑手准时取餐，减少迟到',
+        'Perfect-order rate is the core PT KPI. Above 20 orders/day, each perfect order jumps $50→$53',
+        'La tasa de pedido perfecto es el KPI central del PT. Superar 20/día: $50→$53 por pedido perfecto'), color:'var(--g3)' },
+    { n:'⚠️', title: U('3R扣罚对兼职骑手影响更大','3R penalties hit PT couriers harder','Las penalizaciones 3R impactan más a los repartidores PT'),
+      body: U('每次3R扣30比索，兼职骑手日单量少，一次3R可能直接抵消数单的收益。向骑手重点强调避免拒单',
+        'Each 3R costs $30. PT couriers have fewer orders, so one 3R can wipe out several orders worth of earnings',
+        'Cada 3R cuesta $30. Los repartidores PT tienen menos pedidos, un solo 3R puede borrar ganancias de varios pedidos'), color:'#B91C1C' },
+    { n:'🌟', title: U('优质PT直接进FT转化通道','Top PT → FT pipeline','Los mejores PT → proceso de conversión FT'),
+      body: U('试运行后，完美单率≥97%、零3R的骑手标记为FT候选。PT period是最低成本的全职骑手筛选机制',
+        'After trial, tag couriers with ≥97% perfect rate and zero 3R as FT candidates',
+        'Tras la prueba, etiqueta repartidores con ≥97% perfecto y cero 3R como candidatos FT'), color:'var(--p3)' },
+    { n:'📋', title: U('目标一经锁定不可更改','Targets are locked once issued','Las metas quedan bloqueadas una vez emitidas'),
+      body: U('平台下发的PT在线人数目标不可调整。建议Vendor在报名时保守估算，宁可低报后超额完成',
+        'PT headcount targets cannot be adjusted after issue. Vendors should estimate conservatively',
+        'Las metas de cobertura PT no pueden ajustarse tras emitirse. Los vendors deben estimar de forma conservadora'), color:'var(--a3)' },
+  ];
+  return tips.map(t => '<div class="tip-card"><div class="tip-n">'+t.n+'</div>'+
+    '<div class="tip-title" style="color:'+t.color+'">'+t.title+'</div>'+
+    '<div class="tip-body">'+t.body+'</div></div>').join('');
+}
+
+function getFaqHTML(){
+  const qa = [
+    { tag:'no', q: U('1个骑手可以同时参加FT和PT两个Model吗？',
+        'Can one courier be enrolled in both FT and PT at the same time?',
+        '¿Puede un repartidor participar en FT y PT al mismo tiempo?'),
+      a: U('不可以。每个骑手同时只能选择一个Model。通过CURP号维度识别，平台会进行不定期抽检。一旦发现多账号或作弊行为，将被永久封禁不再录用。',
+        'No. Each courier can only be in one model at a time, enforced at CURP ID level with unscheduled spot checks. Multi-account or cheating results in a permanent ban.',
+        'No. Cada repartidor solo puede estar en un modelo a la vez, aplicado a nivel CURP con verificaciones aleatorias. El fraude resulta en suspensión permanente.') },
+    { tag:'yes', q: U('PT骑手有哪些权益？',
+        'What benefits does a PT courier receive?',
+        '¿Qué prestaciones recibe un repartidor PT?'),
+      a: U('享有：① 固定单均配送费（按单量分档）② 雨天和高温补贴。不享有：积分累计、PK赛、其他奖金池。',
+        'Included: ① Fixed per-order fee (tiered by count) ② Rain & heat subsidies. Not included: points, PK, other bonus pools.',
+        'Incluido: ① Tarifa fija por pedido ② Subsidios lluvia y calor. No incluido: puntos, PK, otros bonos.') },
+    { tag:'no', q: U('未在邀约名单中的Vendor可以参加吗？',
+        'Can a vendor not on the invitation list join?',
+        '¿Puede unirse un vendor no invitado?'),
+      a: U('不允许。本项目为严格邀约制。非受邀Vendor的骑手参与将不享受PT激励，且记入Vendor考核记录。',
+        'No. Strictly invitation-only. Non-invited vendors\' couriers will receive no PT incentives and it will be logged in the vendor record.',
+        'No. Estrictamente solo por invitación. Los repartidores de vendors no invitados no recibirán incentivos PT y se registrará en el historial.') },
+    { tag:'no', q: U('在规定日期，骑手可以随时在线吗？',
+        'On a required date, can a PT courier go online anytime?',
+        '¿Puede el repartidor PT conectarse a cualquier hora en un día requerido?'),
+      a: U('不可以。骑手必须在规定的时间窗口内在线。周末为13:00–22:59，世界杯赛事日为开球前后各2小时。非时段接单不享受PT单价。',
+        'No. Couriers must be online within the assigned time slot. Weekends: 13:00–22:59. Match days: kickoff ±2 hours. Outside-window orders get standard rates.',
+        'No. Deben estar en línea en la ventana asignada. Fines de semana: 13:00–22:59. Días de partido: patada ±2 horas.') },
+    { tag:'yes', q: U('中途可以退出PT计划吗？',
+        'Can a courier exit the PT program mid-way?',
+        '¿Puede un repartidor salir del programa PT a mitad de camino?'),
+      a: U('可以。骑手可随时申请退出PT Model。Vendor需通知对接的RM处理状态变更。退出后该骑手后续接单将按常规考核体系结算。',
+        'Yes. A courier can withdraw at any time. The vendor notifies the RM to process the change. Subsequent orders settle under the standard model.',
+        'Sí. Un repartidor puede retirarse en cualquier momento. El vendor notifica al RM. Los pedidos posteriores se liquidan bajo el modelo estándar.') },
+    { tag:'yes', q: U('PT Model结束后，优质骑手怎么处理？',
+        'What happens to top PT couriers after the program ends?',
+        '¿Qué pasa con los mejores repartidores PT cuando termina el programa?'),
+      a: U('7月6日后PT Model暂停。对于完美单率≥97%、零3R记录的骑手，Vendor可优先推荐其进入FT转化通道，由RM协助完成正式全职注册。',
+        'PT Model suspends after July 6. Couriers with ≥97% perfect rate and zero 3R during the program are prioritized for FT conversion, with RM assistance.',
+        'El Modelo PT suspende tras el 6 de julio. Los repartidores con ≥97% de pedido perfecto y cero 3R tienen prioridad para conversión FT.') },
+  ];
+  return qa.map(q => '<div class="faq-card">'+
+    '<div class="faq-tag '+q.tag+'">'+(q.tag==='yes'?U('✓ 是','✓ Yes','✓ Sí'):U('✗ 否','✗ No','✗ No'))+'</div>'+
+    '<div class="faq-q">'+q.q+'</div><div class="faq-a">'+q.a+'</div></div>'
+  ).join('');
+}
+
+function applyLang(lang){
+  const T = LANG[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.dataset.i18n; if(T[k]!==undefined) el.textContent = T[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const k = el.dataset.i18nHtml; if(T[k]!==undefined) el.innerHTML = T[k];
+  });
+  const mg = e('myths-grid');   if(mg) mg.innerHTML = getMythHTML();
+  const tg = e('tips-grid');    if(tg) tg.innerHTML = getTipsHTML();
+  const fg = e('faq-grid');     if(fg) fg.innerHTML = getFaqHTML();
+}
+
+// ─── CALENDAR ─────────────────────────────────────────────────────────────
+function renderHeatSummary(){
+  const hs = e('heat-summary'); if(!hs) return;
+  hs.innerHTML =
+    '<div class="hs-cat"><div class="hs-cat-h mex">🔥🔥 '+U('MEX 赛事日','MEX Match Days','Días partido MEX')+'</div>'+
+    '<div class="hs-cat-desc">'+U('墨西哥参赛 · 极高热度<br>预估单量 +65%~80%','Mexico plays · Ultra-high heat<br>Est. demand +65%–80%','México juega · Altísima demanda<br>+65%–80%')+'</div></div>'+
+    '<div class="hs-num"><div class="hs-n mex">3</div><div class="hs-d">'+U('非周末赛事日','Non-Weekend','No fin de semana')+'</div></div>'+
+    '<div class="hs-num"><div class="hs-n mex">1</div><div class="hs-d">'+U('周末赛事日','Weekend','Fin de semana')+'</div></div>'+
+    '<div class="hs-info"><strong style="color:var(--red)">'+U('合计 4 天 · 极高热度','4 Days · Ultra-High','4 Días · Altísima demanda')+'</strong>'+
+    '<span>Jun 11 · 18 · 24 · Jun 30 · '+U('全部核心时段激励','All with core incentive windows','Todos con ventanas de incentivo')+'</span></div>'+
+
+    '<div class="hs-cat"><div class="hs-cat-h hot">🔥 '+U('高热赛事日','High-Heat Match Days','Días de alta demanda')+'</div>'+
+    '<div class="hs-cat-desc">'+U('顶级强队 · MTY/CDMX本地淘汰赛<br>预估单量 +40%~65%','Top teams · MTY/CDMX hosted knockout<br>Est. demand +40%–65%','Equipos top · Eliminatorias locales<br>+40%–65%')+'</div></div>'+
+    '<div class="hs-num"><div class="hs-n hot">6</div><div class="hs-d">'+U('非周末','Non-Weekend','No fin de semana')+'</div></div>'+
+    '<div class="hs-num"><div class="hs-n hot">0</div><div class="hs-d">'+U('周末','Weekend','Fin de semana')+'</div></div>'+
+    '<div class="hs-info"><strong style="color:var(--amber)">'+U('合计 6 天 · 高热度','6 Days · High Heat','6 Días · Alta demanda')+'</strong>'+
+    '<span>Jun 15 · 16 · 17 · 22 · 29 · Jul 6</span></div>'+
+
+    '<div class="hs-cat"><div class="hs-cat-h wknd">★ '+U('周末保障日','Weekend Coverage','Fines de semana')+'</div>'+
+    '<div class="hs-cat-desc">'+U('无论有无赛事，周末在线率均为核心目标<br>13:00–22:59 激励时段','Weekend online rate is always a core target<br>13:00–22:59 incentive window','La tasa de conexión los fines de semana es siempre un objetivo clave<br>13:00–22:59')+'</div></div>'+
+    '<div class="hs-num"><div class="hs-n wknd">—</div></div>'+
+    '<div class="hs-num"><div class="hs-n wknd">10</div><div class="hs-d">'+U('周末','Weekends','Fines de semana')+'</div></div>'+
+    '<div class="hs-info"><strong style="color:var(--b3)">'+U('合计 10 天 · 周末保障','10 Days · Weekend Coverage','10 Días · Fines de semana')+'</strong>'+
+    '<span>'+U('May 30/31 · Jun 6/7 · 13/14 · 20/21 · Jul 4/5','May 30/31 · Jun 6/7 · 13/14 · 20/21 · Jul 4/5','May 30/31 · Jun 6/7 · 13/14 · 20/21 · Jul 4/5')+'</span></div>';
+}
+
+function renderCalendar(){
+  renderHeatSummary();
+  const calBody = e('pt-cal-body'); if(!calBody) return;
+  const months = [
+    {y:2026, m:4, name: U('5月 2026','May 2026','Mayo 2026'), from:'2026-05-25'},
+    {y:2026, m:5, name: U('6月 2026','June 2026','Junio 2026'), from:null},
+    {y:2026, m:6, name: U('7月 2026','July 2026','Julio 2026'), from:null},
+  ];
+  let html = '';
+  months.forEach(({y,m,name})=>{
+    const firstDay = new Date(y,m,1).getDay();
+    const offset   = firstDay===0?6:firstDay-1;
+    const dim      = new Date(y,m+1,0).getDate();
+    html += '<div class="pt-cal-month"><div class="pt-cal-month-lbl">'+name+'</div><div class="pt-cal-grid">';
+    for(let i=0;i<offset;i++) html += '<div class="pt-day empty"></div>';
+    for(let d=1;d<=dim;d++){
+      const ds = y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+      const matchInfo = PT_MATCH[ds];
+      const isWknd    = PT_WKND.has(ds);
+      const pip       = inPeriod(ds);
+      let cls='pt-day';
+      let inner='<div class="pd-n">'+d+'</div>';
+      if(matchInfo){
+        const heat = matchInfo.heat;
+        cls += ' '+(heat==='mex'?'mex':'hot')+' match';
+        if(matchInfo.flag) inner += '<span class="pd-flag">'+matchInfo.flag+'</span>';
+        inner += '<div class="pd-lbl">'+matchInfo.label()+'</div>';
+        inner += '<div class="pd-time">'+matchInfo.time+'</div>';
+      } else if(isWknd){
+        cls += ' wknd match';
+        inner += '<div class="pd-lbl">'+U('周末','Wknd','Fin.S')+'</div>';
+        inner += '<div class="pd-time">13:00–22:59</div>';
+      } else if(pip){
+        cls += ' norm';
+      } else {
+        cls += ' out';
+      }
+      html += '<div class="'+cls+'" data-date="'+ds+'">'+inner+'</div>';
+    }
+    html += '</div></div>';
+  });
+  calBody.innerHTML = html;
+  calBody.querySelectorAll('.match').forEach(el=>{
+    el.addEventListener('click', ()=>openModal(el.dataset.date));
+  });
+}
+
+function openModal(dateStr){
+  const T = LANG[curLang];
+  const matchInfo = PT_MATCH[dateStr];
+  const isWknd    = PT_WKND.has(dateStr);
+  const parts     = dateStr.split('-');
+  const mo        = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(parts[1])];
+  e('modal-date').textContent = mo+' '+parseInt(parts[2])+', '+parts[0];
+  if(matchInfo){
+    e('modal-h').textContent = matchInfo.name();
+    const type = matchInfo.heat==='mex' ? T.modal_type_mex : T.modal_type_hot;
+    const venue = typeof matchInfo.venue === 'function' ? matchInfo.venue() : matchInfo.venue;
+    e('modal-body').innerHTML =
+      '<div class="pt-drow"><span class="k">'+T.modal_window+'</span><span class="v time">'+matchInfo.time+'</span></div>'+
+      (venue && venue!=='—' ? '<div class="pt-drow"><span class="k">'+T.modal_venue+'</span><span class="v">'+venue+'</span></div>' : '')+
+      '<div class="pt-drow"><span class="k">'+T.modal_heat+'</span><span class="v '+(matchInfo.heat==='mex'?'mex':'')+'">'+type+'</span></div>'+
+      '<div class="pt-drow"><span class="k">'+T.modal_demand+'</span><span class="v" style="color:var(--red)">'+matchInfo.demand+'</span></div>';
+  } else if(isWknd){
+    e('modal-h').textContent = T.modal_type_wknd;
+    e('modal-body').innerHTML =
+      '<div class="pt-drow"><span class="k">'+T.modal_window+'</span><span class="v time">13:00–22:59</span></div>'+
+      '<div class="pt-drow"><span class="k">'+U('激励类型','Incentive Type','Tipo de incentivo')+'</span><span class="v">'+U('PT周末时段','PT Weekend Slot','Ranura PT fin de semana')+'</span></div>';
+  }
+  e('pt-modal').classList.add('show');
+}
+e('modal-close').addEventListener('click',()=>e('pt-modal').classList.remove('show'));
+e('pt-modal').addEventListener('click',ev=>{if(ev.target===e('pt-modal')) e('pt-modal').classList.remove('show');});
+
+// ─── SCENARIO CARDS ───────────────────────────────────────────────────────
+function calcEarnings(days,opd,pr,bonus){
+  const rate   = opd>20?53:50;
+  const perf   = opd*(pr/100);
+  const imperf = opd-perf;
+  const daily  = perf*rate + imperf*15 + (bonus?opd*2:0);
+  return {total:daily*days, daily};
+}
+function renderScenarios(){
+  const sc = [
+    {cls:'c1', label:U('学生骑手','Student Courier','Repartidor Estudiante'),
+     days:10, opd:15, pr:97, bonus:0,
+     params:U('10个核心日 · 日均15单 · 97%完美单','10 active days · 15 orders/day · 97% perfect','10 días · 15 pedidos/día · 97% perfecto')},
+    {cls:'c2', label:U('周末骑手','Weekend Courier','Repartidor de Fin de Semana'),
+     days:15, opd:20, pr:97, bonus:1,
+     params:U('15个核心日 · 日均20单 · 97%完美单 · 达标奖励','15 active days · 20 orders/day · 97% perfect + bonus','15 días · 20 pedidos/día · 97% perfecto + bono')},
+    {cls:'c3', label:U('精英骑手','Elite Courier','Repartidor Élite'),
+     days:20, opd:25, pr:97, bonus:1,
+     params:U('20天全勤 · 日均25单 · 97%完美单 · 达标奖励','Full 20 days · 25 orders/day · 97% perfect + bonus','20 días completos · 25 pedidos/día · 97% perfecto + bono')},
+  ];
+  const sg = e('sc-grid'); if(!sg) return;
+  sg.innerHTML = sc.map(s=>{
+    const r = calcEarnings(s.days,s.opd,s.pr,s.bonus);
+    return '<div class="sc-card '+s.cls+'">'+
+      '<div class="sc-label">'+s.label+'</div>'+
+      '<div class="sc-num">'+fd(r.total)+'</div>'+
+      '<div class="sc-unit">'+U('MXN 预计总收益','MXN projected total','MXN total proyectado')+'</div>'+
+      '<div class="sc-params">'+s.params+'</div></div>';
+  }).join('');
+}
+
+// ─── SIMULATOR ────────────────────────────────────────────────────────────
+const S = {days:12, opd:18, pr:97, bonus:0};
+function updateToggle(){
+  e('tog_yes').classList.toggle('act', S.bonus===1);
+  e('tog_no').classList.toggle('act',  S.bonus===0);
+}
+function update(){
+  const rate     = S.opd>20?53:50;
+  const perf     = S.opd*(S.pr/100);
+  const imperf   = S.opd-perf;
+  const revPerf  = perf*rate;
+  const revImp   = imperf*15;
+  const revBonus = S.bonus?S.opd*2:0;
+  const daily    = revPerf+revImp+revBonus;
+  const total    = daily*S.days;
+  const totalNo  = (revPerf+revImp)*S.days;
+  e('out_total').textContent = fd(total);
+  e('out_sub').textContent   = unit.day(S.days)+' · '+unit.ord(S.opd)+U('/日 · ','/day · ','/día · ')+S.pr+'% '+U('完美单','perfect','perfecto');
+  e('bv_perfect').textContent   = fk(revPerf*S.days);
+  e('bv_imperfect').textContent = fk(revImp*S.days);
+  e('bv_bonus').textContent     = fk(revBonus*S.days);
+  const mx = total||1;
+  e('bar_perfect').style.width   = Math.min(100, revPerf*S.days/mx*100)  +'%';
+  e('bar_imperfect').style.width = Math.min(100, revImp*S.days/mx*100)   +'%';
+  e('bar_bonus').style.width     = Math.min(100, revBonus*S.days/mx*100) +'%';
+  e('sim_note_tier').textContent = S.opd>20
+    ? U('当前档位B（日单>20）：完美单 $53/单','Tier B (>20 orders/day): perfect order $53/order','Nivel B (>20 pedidos/día): pedido perfecto $53/pedido')
+    : U('当前档位A（日单≤20）：完美单 $50/单','Tier A (≤20 orders/day): perfect order $50/order','Nivel A (≤20 pedidos/día): pedido perfecto $50/pedido');
+  e('sim_note_tier').className = 'sml sim-note '+(S.opd>20?'green':'amber');
+  e('rcd_nobonus').textContent     = fd(totalNo);
+  e('rcd_nobonus_sub').textContent = U('不含人数达标奖励','Without headcount bonus','Sin bono de cobertura');
+  e('rcd_bonus').textContent       = fd(totalNo+S.opd*2*S.days);
+  e('rcd_bonus_sub').textContent   = fk(S.opd*2*S.days)+U(' 额外奖励',' extra bonus',' bono extra');
+}
+function Sbind(id,key,isFloat,fmt){
+  const el=e(id); if(!el) return;
+  el.value=S[key];
+  e(id+'-v').textContent=fmt(S[key]);
+  el.oninput=()=>{
+    S[key]=isFloat?parseFloat(el.value):parseInt(el.value);
+    e(id+'-v').textContent=fmt(S[key]);
+    update();
+  };
+}
+function Ssync(){
+  Sbind('S_days','days',false, v=>unit.day(v));
+  Sbind('S_opd','opd',false,   v=>v+U('单',' orders',' ped'));
+  Sbind('S_pr','pr',false,     v=>v+'%');
+}
+
+// ─── LANGUAGE SWITCH ──────────────────────────────────────────────────────
+function setLang(lang, btn){
+  curLang=lang;
+  document.querySelectorAll('.lang-opt').forEach(b=>b.classList.toggle('act',b===btn));
+  applyLang(lang);
+  try{renderCalendar();renderScenarios();Ssync();update();}catch(err){}
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────
+applyLang('zh');
+renderCalendar();
+renderScenarios();
+Ssync(); update();
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',ev=>{ev.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
