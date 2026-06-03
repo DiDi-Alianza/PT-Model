@@ -417,19 +417,20 @@ hr.divider{border:none;border-top:1px solid var(--border);margin:0}
     <div class="penalty-card">
       <div class="pen-head" data-i18n="pen_head">⚠ 扣罚标准</div>
       <div class="pen-row">
-        <div class="pen-type" data-i18n="pen1_type">3R（三次拒单）</div>
+        <div class="pen-type" data-i18n="pen1_type">3R</div>
         <div class="pen-amount">−$30</div>
-        <div class="pen-note" data-i18n="pen1_note">/次，每次独立计算</div>
       </div>
       <div class="pen-row">
         <div class="pen-type" data-i18n="pen2_type">D责取消（Duty Cancel）</div>
         <div class="pen-amount" data-i18n="pen2_amount">全额餐损</div>
         <div class="pen-note" data-i18n="pen2_note">由Vendor负责追偿</div>
       </div>
-      <div class="pen-row">
-        <div class="pen-type" data-i18n="pen3_type">非核心时段在线</div>
-        <div class="pen-amount" data-i18n="pen3_amount">不计PT激励</div>
-        <div class="pen-note" data-i18n="pen3_note">按常规考核处理</div>
+      <div class="pen-row" style="flex-direction:column;align-items:flex-start;gap:4px">
+        <div style="display:flex;width:100%;align-items:center;gap:12px">
+          <div class="pen-type" style="flex:1" data-i18n="pen3_type">非要求的日期在线</div>
+          <div class="pen-amount" data-i18n="pen3_amount">计入 Full Time Model</div>
+        </div>
+        <div style="font-size:11px;color:var(--ink3);padding-left:0" data-i18n="pen3_note">一个骑手同时只能存在一种身份模式</div>
       </div>
     </div>
   </div>
@@ -651,9 +652,9 @@ const LANG = {
     tier_b_cond:'非完美单：$15/单 · 超过20单自动升档',
     bonus_unit:'/单', bonus_desc:'达到平台下发的PT在线人数目标，额外加2比索/单（结算至Vendor）',
     pen_head:'⚠ 扣罚标准',
-    pen1_type:'3R（三次拒单）', pen1_note:'/次，每次独立计算',
+    pen1_type:'3R',
     pen2_type:'D责取消（Duty Cancel）', pen2_amount:'全额餐损', pen2_note:'由Vendor负责追偿',
-    pen3_type:'非核心时段在线', pen3_amount:'不计PT激励', pen3_note:'按常规考核处理',
+    pen3_type:'非要求的日期在线', pen3_amount:'计入 Full Time Model', pen3_note:'一个骑手同时只能存在一种身份模式',
     sim_tag:'收益模拟器', sim_title:'拖动滑块，实时计算你的PT收益',
     sim_sub:'基于真实定价公式，所有数字实时联动',
     sim_inputs:'参数设置',
@@ -705,9 +706,9 @@ const LANG = {
     tier_b_cond:'Non-perfect: $15/order · Upgrades auto above 20 orders',
     bonus_unit:'/order', bonus_desc:'When vendor meets platform PT headcount target, +$2/order bonus (paid to vendor)',
     pen_head:'⚠ Penalty Standards',
-    pen1_type:'3R (Triple Rejection)', pen1_note:'/occurrence, counted independently',
+    pen1_type:'3R',
     pen2_type:'D-Responsibility Cancel (Duty Cancel)', pen2_amount:'Full food-loss coverage', pen2_note:'Vendor responsible for recovery',
-    pen3_type:'Online outside core hours', pen3_amount:'No PT incentive', pen3_note:'Processed under standard model',
+    pen3_type:'Online on non-required dates', pen3_amount:'Counted as Full Time Model', pen3_note:'A courier can only exist in one identity mode at a time',
     sim_tag:'Earnings Simulator', sim_title:'Drag the sliders — see your PT earnings live',
     sim_sub:'Real pricing formulas, all numbers update instantly',
     sim_inputs:'Parameters',
@@ -759,9 +760,9 @@ const LANG = {
     tier_b_cond:'No perfecto: $15/pedido · Sube automáticamente sobre 20 pedidos',
     bonus_unit:'/pedido', bonus_desc:'Cuando el vendor alcanza la meta PT de cobertura, +$2/pedido (se paga al vendor)',
     pen_head:'⚠ Penalizaciones',
-    pen1_type:'3R (Triple Rechazo)', pen1_note:'/ocurrencia, cada una cuenta independientemente',
+    pen1_type:'3R',
     pen2_type:'Cancelación D-Responsabilidad (Duty Cancel)', pen2_amount:'Cubre pérdida total', pen2_note:'El vendor es responsable de la recuperación',
-    pen3_type:'Conexión fuera de horario', pen3_amount:'Sin incentivo PT', pen3_note:'Bajo modelo estándar',
+    pen3_type:'Conexión en fechas no requeridas', pen3_amount:'Se cuenta como Modelo Full Time', pen3_note:'Un repartidor solo puede tener un modo de identidad a la vez',
     sim_tag:'Simulador de Ingresos', sim_title:'Desliza los controles — ve tus ganancias PT en vivo',
     sim_sub:'Fórmulas de precios reales, números actualizados al instante',
     sim_inputs:'Parámetros',
